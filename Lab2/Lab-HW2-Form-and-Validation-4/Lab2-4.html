@@ -1,0 +1,55 @@
+<!DOCType html>
+<html>
+<head>
+    <meta charset='utf-8'>
+</head>
+<body>
+    <form action="form-echo.php" method="get">
+    USERNAME :
+    <input
+        type="text"
+        name="username"
+        placeholder="Username"
+        pattern="[A-Z]+"
+        title="Username should only contain lowercase letters. e.g. john"><br>
+    รหัสนักศึกษา :
+    <input
+    type="text"
+    name="studentid"
+    pattern="[0-9]{2}-[0-9]{6}-[0-9]{4}-[0-9]{1}"
+    placeholder="ex.61-040626-1234-5"
+    title="กรุณากรอกให้ตรงรูปแบบที่ให้มา"><br>
+    บ้านเลขที่ :
+    <input
+    type="text"
+    name="houseid"
+    pattern="[0-9]{3}/.+"
+    placeholder="ex.235/4  69"
+    title="กรุณากรอกให้ถูกต้อง"><br>
+    รหัสสินค้า :
+    <input
+    type="text"
+    name="สินค้า"
+    title="ต้องใส่รหัสด้วยอักขระตัวใหญ่ 3 ตัวและตัวเลข 2 ตัวเท่านั้น ex.AAA89"
+    pattern="^[A-Z]{3}[0-9]{2}"><br>
+    ชื่อ-นามสกุล :
+    <input
+    type="text"
+    name="username"
+    title="ชื่อภาษาไทยเท่านั้น"
+    pattern="[ก-๛]+.[ก-๛]+">
+<br>
+    <p><label>สาขาวิชา:</label>
+    <select name="dept">
+        <option value="">--Please choose an option--</option>
+        <option value="CS">CS</option>
+        <option value="IC">IC</option>
+        <option value="MA">MA</option>
+        <option value="IMI">IMI</option>
+        <option value="AS">AS</option>
+        <option value="AFET">AFET</option>
+    </select>
+    <p><input type="submit" value="Submit">
+    </form>
+</body>
+</html>

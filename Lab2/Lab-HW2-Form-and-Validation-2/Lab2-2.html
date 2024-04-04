@@ -1,0 +1,109 @@
+<!DOCType html>
+<html>
+<head>
+    <meta charset='utf-8'>
+</head>
+<body>
+    <form action="form-echo.php" method="get">
+    <h3>แบบฟอร์มจองทัวร์</h3>
+    <p>ข้อมูลทั่วไป</p>
+    ชื่อ-สกุล:<br>
+    <input
+    type="text"
+    name="username"
+    placeholder="กรอกชื่อ-สกุล"
+    pattern="[ก-๛]+.[ก-๛]+"
+    title="กรอกชื่อเป็นภาษาไทยเท่านั้น">
+    *<br>
+    Email:<br>
+    <input
+    type="email"
+    name="email"
+    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+    title="กรุณากรอกให้ถูกต้อง">*<br>
+    โทรศัพท์:<br>
+    <input
+    type="tel"
+    name="phone"
+    pattern="[0-9]{10}"
+    placeholder="+66"
+    title="กรอกตัวเลขให้ถูกต้อง">*<br>
+    ที่อยู่:<br>
+    <textarea cols="45" rows="5"></textarea><br>
+    รหัสไปรษณีย์:
+    <input
+    type="text"
+    name="text"
+    maxlength="5" size="5"
+    title="กรุณาใส่ให้ครบ"
+    pattern="/d{5}"><br>
+    รูปผู้จอง:
+    <input
+    type="file"
+    name="file"
+    title="ต้องเป็นไฟล์ประเภท png หรือ jpeg เท่านั้น"
+    accept="image/png,image/jpeg"><br><br>
+    <p>ข้อมูลเข้าสู่ระบบ</p>
+    Username:<br>
+    <input
+    type="text"
+    name="text"
+    title="ไม่สามารถมีอัคระพิเศษได้"
+    pattern="\w{8,}"><br><br>
+    Password:<br>
+    <input
+    type="password"
+    name="password"
+    title="รหัสควรมีตั้งแต่ 8 ตัวขึ้นไป"
+    pattern=".{8,}"><br><br>
+    <p>ข้อมูลทัวร์ที่ต้องการ</p>
+    แพคเก็จทัวร์ :
+    <select name="dept">
+        <option value="">--select--</option>
+        <option value="Japan">Japan</option>
+        <option value="Korea">Korea</option>
+        <option value="China">China</option>
+    </select><br>
+    วันที่เดินทาง :
+    <input
+    type="date"
+    name="date"
+    min="2022-01-01"
+    max="2023-12-31"><br>
+    จำนวนผู้เดินทาง:
+    <input
+    type="text"
+    name="people"
+    pattern="[0-9]"
+    min="1"
+    max="10"><br>
+    เน้นการท่องเที่ยวแบบใด?<br>
+    <div>
+        <input
+        type="checkbox"
+        name="ชอปปิ้ง">
+        <label for="ชอปปิ้ง">ชอปปิ้ง</label>
+    </div>
+    <div>
+        <input
+        type="checkbox"
+        name="ธรรมชาติ">
+        <label for="ธรรมชาติ">ธรรมชาติ</label>
+    </div>
+    <div>
+        <input
+        type="checkbox"
+        name="ทะเล">
+        <label for="ทะเล">ทะเล</label>
+    </div><br><br>
+    ยอมรับเงื่อนไขและข้อตกลง
+    <div>
+        <input type="radio" name="radio" value="agree" checked>
+        <label for="agree">I agree</label>
+        <input type="radio" name="radio" value="disagree">
+        <label for="disagree">I disagree</label>
+    </div>
+    <input type="submit" value="จอง">
+    </form>
+</body>
+</html>

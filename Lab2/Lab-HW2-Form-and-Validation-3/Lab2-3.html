@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+    </head>
+<style>
+    table,th,td{
+        border:1px solid black;
+    }
+</style>
+<body>
+    <form action="login.html">
+    <h1>เข้าสู่ระบบ</h1>
+    <table>
+        <tr><th>USERNAME :</th>
+            <th><input
+            type="text"
+            name="username"
+            autofocus
+            required></th><br>
+        </tr>
+        <tr>
+            <th>Password:</th>
+            <th><input
+            type="password"
+            name="password"
+            required></th><br>
+        </tr>
+        <tr><td colspan="2">
+            กรุณาพิมพ์ตามตัวเลขที่ปรากฏ:<br>1559<br>
+            <input
+            type="text"
+            name="text"
+            pattern="1559"
+            title="กรุณากรอกให้ถูกต้อง"
+            required></td>
+        </tr>
+    </table><br>
+    <input type="image" src="login_logo.png" alt="Submit" width="50" height="50">
+    </form>
+</body>
+</html>

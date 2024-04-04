@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        table,th,td{
+            border:1px solid black;
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <script>
+            function addName(){
+                var Name=document.getElementById("NameInput");
+                var Address=document.getElementById("AddressInput");
+                var Phone=document.getElementById("PhoneInput");
+
+                var td1=document.createElement("td");
+                td1.innerHTML=Name.value;
+                var td2=document.createElement("td");
+                td2.innerHTML=Address.value;
+                var td3=document.createElement("td");
+                td3.innerHTML=Phone.value;
+
+                var table=document.getElementById("table");
+                var tr=document.createElement("tr");
+
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                table.appendChild(tr);
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+        ชื่อลูกค้า:<input type="text" id="NameInput"><br>
+        ที่อยู่:<input type="text" id="AddressInput"><br>
+        โทรศัพท์:<input type="text" id="PhoneInput"><br>
+        <input type="button" id="addButton" value="เพิ่ม" onclick="addName()">
+        <table id="table">
+        <tr>
+            <th>ชื่อลูกค้า</th>
+            <th>ที่อยู่</th>
+            <th>โทรศัพท์</th>
+        </tr>
+        </table>
+        </form>
+    </body>
+</html>

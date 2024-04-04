@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function countTheword(str) {
+            var count = str.split("the").length - 1
+            return alert(`มี The ทั้งหมด ${count} ตัว`)
+        }
+      </script>
+</head>
+<body>
+    The eight ruler of the Fifth Dynasty in
+    the late 25th century.<br><br>
+    <a href="#" onclick="countTheword('The eight ruler of the Fifth Dynasty in the late 25th century')">Click for count 'the'</a>
+</body>
+</html>

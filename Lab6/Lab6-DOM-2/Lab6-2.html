@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function calculation() {
+            var num1 = document.getElementById("Number1");
+            var num2 = document.getElementById("Number2");
+            var ans = document.getElementById("Answer");
+            var select = document.getElementById("select");
+
+            switch (select.value) {
+                case "+":
+                ans.value = parseInt(num1.value) + parseInt(num2.value) ;
+                    break;
+
+                case "-":
+                ans.value = parseInt(num1.value) - parseInt(num2.value) ;
+                    break;
+
+                case "*":
+                ans.value = parseInt(num1.value) * parseInt(num2.value) ;
+                    break;
+
+                case "/":
+                ans.value = parseInt(num1.value) / parseInt(num2.value) ;
+                    break;
+            
+                default:
+                    break;
+            }
+        }
+      </script>
+</head>
+<body>
+    <form>
+        <input type="text" id="Number1"> 
+        <select id="select">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" id="Number2"> =
+        <input type="text" id="Answer" value="0">
+        <input type="button" value = "Go Go" id="add" onclick="calculation()">
+    </form>
+
+</body>
+</html>

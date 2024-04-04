@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+    function greentext1() {
+        var N = document.getElementById("Name");
+        N.style.color = "Green" ;
+    }
+
+    function greentext2() {
+        var A = document.getElementById("Age");
+        A.style.color = "Green" ;
+        
+    }
+
+    function greentext3() {
+        var BD = document.getElementById("Birthday");
+        BD.style.color = "Green" ;
+
+    }
+    </script>
+</head>
+<body>
+<form>
+    Name: <input type="text" id="Name" onfocusout="greentext1()"><br>
+    Age: <input type="text" id="Age" onfocusout="greentext2()"><br>
+    Birthdate: <input type="text" id="Birthday" onfocusout="greentext3()">
+</form>
+</body>
+</html>

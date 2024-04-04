@@ -1,0 +1,12 @@
+<html>
+<body>
+    <?php
+    if($_GET['language']=='en'){
+        setcookie("lang","en",time()+3600);
+    }
+    if($_GET['language']=='th'){
+        setcookie("lang","th",time()+3600);
+    }
+    ?>
+</body>
+</html>
